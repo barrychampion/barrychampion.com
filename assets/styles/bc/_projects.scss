@@ -1,0 +1,11 @@
+.projects {
+	.project {
+		@include span-columns(12);
+		@include MQ(M) {
+			@include span-columns(6);
+		}
+		@include MQ(L) {
+			@include span-columns(4);
+		}
+	}
+}

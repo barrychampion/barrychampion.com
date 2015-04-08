@@ -16,7 +16,12 @@ button, .button {
 	user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
-	@include transition(background .2s);
+	&:active,
+	&:hover,
+	&:focus {
+		color: darken($blue, 10);
+		border-color: darken($blue, 10);
+		}
 	&:disabled {
 		cursor: not-allowed;
 		opacity: 0.5;

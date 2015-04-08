@@ -1,0 +1,24 @@
+button, .button {
+	font: {
+		family: $bc-font-family;
+		size:1rem;
+		weight:700;
+	}
+	background-color: transparent;
+	border-radius: $bc-border-radius;
+	border: 2px solid $blue;
+	color: $blue;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 1;
+	padding: 1em 2em;
+	text-decoration: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	@include transition(background .2s);
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+}

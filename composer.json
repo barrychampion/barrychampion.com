@@ -1,0 +1,5 @@
+{
+    "require": {
+        "roots/soil": "3.1.0"
+    }
+}

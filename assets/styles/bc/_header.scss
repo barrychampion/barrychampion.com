@@ -15,11 +15,16 @@
 		position: absolute;
 		top: 1em;
 		left: 1.2em;
+		font-family: $bc-header;
 		font-size: 1rem;
 		font-weight: 400;
 		z-index: 10;
 		line-height: 1.1em;
 		@include MQ(M) {
+			font-size: 1.2rem;
+			left: 1.5em;
+		}
+		@include MQ(L) {
 			font-size: 1.2rem;
 			left: 2em;
 		}

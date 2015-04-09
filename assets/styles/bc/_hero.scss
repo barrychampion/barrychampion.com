@@ -8,10 +8,10 @@
 	@media only screen and (min-width: $L) {
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1920x1255.jpg);
 	}
-	@media only screen (min-width: $M) and (max-width: $L) {
+	@media only (min-width: $M) and (max-width: $L) {
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1170x765.jpg);
 	}
-	@media only screen (min-width: $S) and (max-width: $M) {
+	@media only (min-width: $S) and (max-width: $M) {
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-768x502.jpg);
 	}
 	@media only screen and (max-width: $S) {
@@ -57,7 +57,7 @@
 					font-size: 2.6rem;
 				}
 				@include media($L) {
-					font-size: 3.2rem;
+					font-size: 4rem;
 				}
 			}
 			p {
@@ -78,9 +78,3 @@
 		}
 	}
 }
-
-/*.svg-face {
-	height: 12em;
-	margin: 2em 0 1em;
-	opacity: 0.7;
-}*/

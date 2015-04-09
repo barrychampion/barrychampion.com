@@ -1,5 +1,6 @@
 
 $bc-font-family: 'Open Sans', sans-serif;
+$bc-header: 'Montserrat', sans-serif;
 $bc-border-radius: 5px;
 
 // colors
@@ -27,3 +28,8 @@ $header-height-L: 100px;
 $content-zindex: 1;
 $nav-zindex: 2;
 $header-zindex: 3;
+
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;

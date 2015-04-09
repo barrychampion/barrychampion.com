@@ -64,3 +64,8 @@ $L:     1170px;
    @media only screen and (min-width: $L) { @content; } 
   }
 }
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

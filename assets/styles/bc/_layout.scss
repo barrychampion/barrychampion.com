@@ -1,31 +1,37 @@
-html, body {
+html,
+body {
 	height: 100%;
-	margin:0;
+	margin: 0;
 }
+
 .container {
 	@include outer-container;
-		.main {
-			@include MQ(M) {
-			  @include span-columns(8);
-			}
-		}
-		.sidebar {
+	.main {
 		@include MQ(M) {
-		  @include span-columns(4);
+			@include span-columns(8);
+		}
+	}
+	.sidebar {
+		@include MQ(M) {
+			@include span-columns(4);
 		}
 	}
 	max-width: $L; // breakpoints inside partials > _layout.scss
 }
+
 .content {
 	display: block;
 	margin: 4em auto 0;
 	padding: 0 1.2em 2em;
 	@include MQ(M) {
 		margin-top: 7em;
+		padding: 0 1.5em 2em;
+	}
+	@include MQ(L) {
 		padding: 0 2em 2em;
 	}
 }
+
 .home .content {
 	margin-top: 2em;
 }
-

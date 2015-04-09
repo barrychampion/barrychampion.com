@@ -1,11 +1,24 @@
 .projects {
+	main {
+		@include display(flex);
+		@include flex-wrap(wrap);
+		@include justify-content(space-between);
+	}
 	.project {
+		@include transition (all 0.4s ease-in-out);
+		background-color: #ddd;
 		@include span-columns(12);
+		@include display-context(table);
+		@include pad(2em);
+		margin: 0 0 2em;
 		@include MQ(M) {
 			@include span-columns(6);
+			@include omega;
 		}
 		@include MQ(L) {
-			@include span-columns(4);
+			@include span-columns(3);
+			@include omega;
+			
 		}
 	}
 }

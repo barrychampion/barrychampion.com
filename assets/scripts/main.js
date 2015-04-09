@@ -141,4 +141,8 @@ jQuery(document).ready(function($){
 	
 	 document.createElement( "picture" );
 	
+	$(function(){
+	  $('#mixItUp').mixItUp();
+	});
+	
 });

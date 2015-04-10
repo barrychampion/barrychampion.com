@@ -45,13 +45,13 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  * Register sidebars
  */
 function widgets_init() {
-/*  register_sidebar([
+  register_sidebar([
     'name'          => __('Hero', 'sage'),
     'id'            => 'hero',
     'before_widget' => '<section class="hero %1$s %2$s">',
     'after_widget'  => '</section>',
   ]);
-*/
+
 	register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',

@@ -2,7 +2,7 @@
 
 <?php get_template_part( 'templates/head'); ?>
 
-<body id="mixItUoo" class="projects">
+<body id="mixItUoo" class="projects archive">
 
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 	<section class="content" role="document">

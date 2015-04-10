@@ -5,7 +5,6 @@
 	height: $header-height-S;
 	width: 100%;
 	z-index: $header-zindex;
-	@include font-smoothing;
 	@include MQ(M) {
 		height: $header-height-M;
 		background-color: white;
@@ -13,11 +12,13 @@
 	}
 	.logo {
 		position: absolute;
-		top: 1em;
+		top: 0.85em;
 		left: 1.2em;
-		font-family: $bc-header;
-		font-size: 1rem;
-		font-weight: 400;
+		font {
+			family:$bc-header;
+			size: 1rem;
+			weight: 400;
+		}
 		z-index: 10;
 		line-height: 1.1em;
 		@include MQ(M) {
@@ -32,8 +33,10 @@
 			display: none;
 		}
 		strong {
-			font-weight: 700;
-			font-size: 1.3rem;
+			font {
+				weight: 700;
+				size: 1.3rem;
+			}
 			@include MQ(M) {
 				font-size: 1.6rem;
 			}
@@ -218,7 +221,6 @@
 		@include transition-duration(.3s);
 		li {
 			@include font-size(22px);
-			@include font-smoothing;
 			margin: .2em 0;
 			text-transform: capitalize;
 		}

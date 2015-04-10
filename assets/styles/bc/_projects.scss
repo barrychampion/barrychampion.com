@@ -1,3 +1,6 @@
+.projects.archive {
+	background-color: #eee;
+}
 .projects {
 	main {
 		@include display(flex);
@@ -5,12 +8,14 @@
 		@include justify-content(space-between);
 	}
 	.project {
+		box-shadow: 0 1px 2px rgba(black, .2);
+		cursor: pointer;
+		background-color: white;
 		@include transition (all 0.4s ease-in-out);
-		background-color: #ddd;
 		@include span-columns(12);
 		@include display-context(table);
-		@include pad(2em);
-		margin: 0 0 2em;
+		margin: 0 0 1.5em;
+		line-height: 0;
 		@include MQ(M) {
 			@include span-columns(6);
 			@include omega;
@@ -20,5 +25,19 @@
 			@include omega;
 			
 		}
+		img {
+			height: auto;
+			margin: 0;
+			border-bottom: 1px solid rgba(black, .1);
+
+		}
+		header {
+			padding: 1em;
+		}
+		h2 {
+			margin: 0;
+			font-weight: 400;
+		}
+
 	}
 }

@@ -59,3 +59,6 @@ function dbs_post($url, $action, $params) {
 }
 
 remove_action('wp_enqueue_scripts', 'FrmProEntriesController::add_js');
+
+
+add_image_size( 'Large@2x', 2340, 0 );

@@ -6,16 +6,6 @@ body {
 
 .container {
 	@include outer-container;
-	.main {
-		@include MQ(M) {
-			@include span-columns(8);
-		}
-	}
-	.sidebar {
-		@include MQ(M) {
-			@include span-columns(4);
-		}
-	}
 	max-width: $L; // breakpoints inside partials > _layout.scss
 }
 
@@ -34,4 +24,17 @@ body {
 
 .home .content {
 	margin-top: 2em;
+}
+
+.contact {
+	.main {
+		@include MQ(M) {
+			@include span-columns(8);
+		}
+	}
+	.sidebar {
+		@include MQ(M) {
+			@include span-columns(4);
+		}
+	}
 }

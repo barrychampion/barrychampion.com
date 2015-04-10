@@ -1,6 +1,8 @@
 body {
 	font: {
 		family: $bc-font-family;
+		@include font-smoothing;
+		-webkit-font-smoothing: antialiased;
 		size: 100%;
 	}
 	color: rgba(black, .8);
@@ -12,9 +14,11 @@ body {
 	}
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: $bc-header;
+	family: $bc-font-family;
+	margin: 0 0 0.5em;
 }
 h1 {
+	font-family: $bc-header;
 	font-size: 2.6em;
 }
 a, button, .button {
@@ -28,4 +32,11 @@ a, button, .button {
 }
 .sidebar h2 {
 	font-size: 2em
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+	height: auto;
 }

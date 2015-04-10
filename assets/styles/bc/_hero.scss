@@ -1,4 +1,7 @@
-.hero {
+.hero img {
+	height: auto;
+}
+.home .hero {
 	position: relative;
 	background-color: black;
 	width:100%;
@@ -36,45 +39,52 @@
 		position: absolute;
 		@include transform(translate(-50%, -50%));
 		left: 50%;
-		top: 60%;
-		width: 100%;
-		@include media($L) {
-			top: 57%;
+		top:58%;
+		@include media($M) {
+			top:56%;
 		}
+		@include media($L) {
+			top:52%;
+		}
+		width: 100%;
 		color: white;
 		margin: auto;
 		padding: 3em 2em;
-		@include media($L) {
-			padding: 5em 2em 4em;
-		}
-		.hero-copy {
-			h1 {
-				font-size: 1.7em;
-				margin-bottom:1em;
-				font-weight: 400;
-				text-shadow: $bc-shadow;
+	}
+		h1 {
+			font-size:1.2rem;
+			font-weight: 400;
+			text-shadow: $bc-shadow;
+			margin: 0 0 1.5em;
+			span {
+				font-size:3.4rem;
+				font-weight: 700;
 				@include media($M) {
-					font-size: 2.6rem;
+					font-size:6.5rem;
 				}
 				@include media($L) {
-					font-size: 4rem;
+					font-size:12rem;
 				}
 			}
-			p {
-				line-height: 1.4em;
-				margin: 0 auto 2em auto;
-				color: rgba(white, .8);
-			}
 		}
-		.button {
-			background-color: rgba(white, .1);
-			border-color: rgba(white, .8);
+		h2 {
+			font-weight: 400;
 			color: rgba(white, .8);
-			&:hover {
-				border-color: white;
-				color: white;
-				background-color: rgba(white, .2);
-			}
+			margin-bottom: 2em
+		}
+		p {
+			line-height: 1.4em;
+			margin: 0 auto 2em auto;
+			color: rgba(white, .8);
+		}
+	.button {
+		background-color: rgba(white, .1);
+		border-color: rgba(white, .8);
+		color: rgba(white, .8);
+		&:hover {
+			border-color: white;
+			color: white;
+			background-color: rgba(white, .2);
 		}
 	}
 }

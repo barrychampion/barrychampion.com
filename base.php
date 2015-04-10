@@ -15,7 +15,7 @@ use Roots\Sage\Wrapper;
 	
 	<?php dynamic_sidebar('hero'); ?>
 	
-    <div class="content" role="document">
+    <div class="content container" role="document">
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->

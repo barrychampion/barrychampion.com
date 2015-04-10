@@ -14,21 +14,11 @@ use Roots\Sage\Wrapper;
     ?>
     <section class="hero">
         <div class="hero-inner">
-			<div class="hero-copy">
-				<h1>Website Design &amp; WordPress Development</h1>
-				<p>UX/UI Website Designer, Developer in Chelmsford, Essex and London</p>	
-			</div>
-		<!--<a href="<?php get_site_url(); ?>/services" class="button">Services</a> --><a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
+			<h1>Yes... My surname really is<br><span>CHAMPION</span></h1>
+			<h2>UX/UI Website Designer, Developer in Chelmsford, Essex and London</h2>	
+			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
         </div>
     </section>
-	  
-	<?php dynamic_sidebar('hero'); ?>
-
-    <section class="container" role="document">
-        <main class="content" role="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-    </section><!-- /.container -->
     <?php
       get_template_part('templates/footer');
       wp_footer();

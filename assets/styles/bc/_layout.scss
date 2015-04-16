@@ -37,17 +37,18 @@ body.page {
     min-height: 100vh;
 }
 .wrap {
-	/* Pepperidge Farm remembers. */
-    -webkit-box-flex: 1;
+/* Pepperidge Farm remembers. */
+    -webkit-box-flex: 1 0 auto;
     /* IE10, ugh */
-    -ms-flex: 1;
+    -ms-flex: 1 0 auto;
     /* Unprefixed */
-    flex: 1;
+    flex: 1 0 auto;
     /* prefixed webkit syntax */
-    -webkit-flex: 1;
-	@include clearfix;
+    -webkit-flex: 1 0 auto;
 }
-
+header, footer {
+	flex-shrink: 0; /* 2 */
+}
 .container {
 	@include outer-container;
 	max-width: $L; // breakpoints inside partials > _layout.scss

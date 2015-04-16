@@ -4,6 +4,9 @@ label,
 select {
   font-family: $bc-font-family;
 }
+input {
+	border: 2px solid inherit;
+}
 fieldset {
   background-color: transparent;
   border: none;
@@ -24,4 +27,16 @@ select[multiple=multiple],
 textarea {
   background-color: transparent;
 	border-color: #ccc;
+}
+.frm_error_style, .frm_error {
+  @include flash($error-color);
+}
+.frm_blank_field {
+	input, textarea {
+		border-bottom: 2px solid darken($error-color, 60%);
+		margin-bottom: 0;
+	}
+	textarea  {
+		margin-bottom: -6px
+	}
 }

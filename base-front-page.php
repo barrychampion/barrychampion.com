@@ -10,7 +10,7 @@
 	<section class="hero">
 		<div class="hero-inner">
 			<h1>Yes, my surname really is<br><span>CHAMPION</span></h1>
-			<p>UX/UI Website Designer and Front End Developer in Chelmsford, Essex and London</p>
+			<p><?php bloginfo('description'); ?></span></p>
 			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
 		</div>
 	</section>

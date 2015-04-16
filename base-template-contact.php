@@ -3,10 +3,10 @@
 <?php get_template_part( 'templates/head'); ?>
 
 <body <?php body_class(); ?>>
+	<div class="wrap" role="document">
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 
 	<?php dynamic_sidebar( 'hero'); ?>
-	<div class="wrap" role="document">
 		<div class="content container">
 			<main class="main" role="main">
 				<?php get_template_part( 'templates/page', 'header'); ?>

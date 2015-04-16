@@ -124,25 +124,32 @@
 }
 
 .content.responsive {
-	margin: 3em auto;
+	margin: 4em auto 3em;
 	img {
 		margin: 2em 0 0
 	}
 }
 .web-design {
-	min-height:960px;
-	background-color:#999;
-	border-top: 4px solid #999;
-	background-image: url(/bc/wp-content/themes/bc/assets/images/web-design-bg.svg);
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow: hidden; //Needed for ie
-	padding:18em 0;
+		background-color:#999;
+		border-top: 4px solid #999;
+		@media only screen and (min-width: $S) {
+			background-image: url(/bc/wp-content/themes/bc/assets/images/web-design-bg-s.svg);
+		}
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		padding:1em 0 6em;	
+	
+		@include MQ(M) {
+			background-image: url(/bc/wp-content/themes/bc/assets/images/web-design-bg.svg);
+			min-height:960px;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+			overflow: hidden; //Needed for ie		
+			padding:18em 0;	
+		}
 	margin: 2em 0;
-	a,
-	button,
-	.button {
+	a, .button {
 		@include transition(.2s);
 		color: white;
 		&:active, 
@@ -153,7 +160,7 @@
 	}
 }
 .content.cms {
-	margin: 5em auto 4em;
+	margin: 4em auto 3em;
 	img {
 		margin: 0 auto
 	}

@@ -1,0 +1,7 @@
+.contact button {
+	margin-top: 1em;
+	@media only screen and (max-width: $M) {
+		width:100%;
+		padding: 2em;
+	}
+}

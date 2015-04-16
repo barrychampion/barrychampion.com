@@ -1,7 +1,51 @@
-html,
+
+html.front-page {
+	height:100%;
+}
 body {
-	height: 100%;
+	height:100%;
 	margin: 0;
+}
+body.page {
+    /**
+    * 1. Making the <body> element behave like a flexbox container.
+    * 2. Making flex children line up vertically (horizontal is default)
+    * 3. Setting the min-height to 100% of the viewport height.
+    */
+
+    /* [1] */
+    /* Ye Olde Flexbox for Webkit */
+    display: -webkit-box;
+    /* Tweener flexbox for IE10 */
+    display: -ms-flexbox;
+    /* Prefixed "new flexbox" */
+    display: -webkit-flex;
+    /* unprefixed standard "new flexbox" version for the rest */
+    display: flex;
+
+    /* [2] */
+    /* Your grandparents flexbox for old Webkit */
+    -webkit-box-orient: vertical;
+    /* Prefixed new syntax: */
+    -webkit-flex-direction: column;
+    /* (Same syntax for weird IE tweener) */
+    -ms-flex-direction: column;
+    /* unprefixed new syntax */
+    flex-direction: column;
+
+    /* [3] */
+    min-height: 100vh;
+}
+.wrap {
+	/* Pepperidge Farm remembers. */
+    -webkit-box-flex: 1;
+    /* IE10, ugh */
+    -ms-flex: 1;
+    /* Unprefixed */
+    flex: 1;
+    /* prefixed webkit syntax */
+    -webkit-flex: 1;
+	@include clearfix;
 }
 
 .container {
@@ -10,7 +54,7 @@ body {
 }
 
 .content {
-	display: block;
+	width: 100%;
 	margin: 4em auto 0;
 	padding: 0 1.2em 2em;
 	@include MQ(M) {
@@ -20,10 +64,6 @@ body {
 	@include MQ(L) {
 		padding: 0 2em 2em;
 	}
-}
-
-.home .content {
-	margin-top: 2em;
 }
 
 .contact {

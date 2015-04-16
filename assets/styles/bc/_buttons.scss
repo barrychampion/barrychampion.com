@@ -19,8 +19,8 @@ button, .button {
 	&:active,
 	&:hover,
 	&:focus {
-		color: darken($blue, 10);
-		border-color: darken($blue, 10);
+		color: darken($blue, 15%);
+		border-color: darken($blue, 15%);
 		}
 	&:disabled {
 		cursor: not-allowed;

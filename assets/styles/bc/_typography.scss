@@ -2,41 +2,106 @@ body {
 	font: {
 		family: $bc-font-family;
 		@include font-smoothing;
-		-webkit-font-smoothing: antialiased;
-		size: 100%;
 	}
-	color: rgba(black, .8);
+	color: rgba(black,
+	.8);
 	background-color: white;
-
 	&.overflow-hidden {
 		/* when primary navigation is visible, the content in the background won't scroll */
+		
 		overflow: hidden;
 	}
 }
-h1, h2, h3, h4, h5, h6 {
-	family: $bc-font-family;
-	margin: 0 0 0.5em;
-}
-h1 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $bc-header;
-	font-size: 2.6em;
+	@include font-smoothing;
+	margin: 0 0 0.5em;
+	font-weight: 400;
+	font-size: 1.2rem;
 }
-a, button, .button {
+
+h1 {
+	font-size: 2rem;
+	@include MQ(M) {
+		font-size: 2.6rem;
+	}
+	font-weight: 700;
+}
+
+a,
+button,
+.button {
 	@include transition(.2s);
-	color:$blue;
+	color: $blue;
 	&:active,
-	&:hover,
+	&:focus,
+	&:hover {
+	color: darken($blue, 15%);
+	}
+
+	&:active,
 	&:focus {
-		color: darken($blue, 20);
+	outline: none;
 	}
 }
-.sidebar h2 {
-	font-size: 2em
+
+.sidebar h3 {
+	font-size: 2em;
 }
 
 img,
 picture {
-  margin: 0;
-  max-width: 100%;
+	margin: 0;
+	max-width: 100%;
 	height: auto;
+	//@include image-rendering(optimizeSpeed);
+}
+figure {
+	background-color: #eee;
+	color: $grey;
+	font-size: 0.8em;
+	margin: 0;
+	width: auto !important;
+	box-shadow: 0 1px 2px rgba(black, .2);
+	figcaption {
+		padding: 0.6em 1.5em 1.3em;
+		margin: 0;
+	}
+}
+iframe {
+	line-height: 0;
+}
+.main h2 {
+	font-size: 1.6em;
+	margin:2em 0 0.5em;
+}
+main {
+	ul {
+	margin: 0 0 2em 3em;
+	list-style-type: disc;
+		ul {
+			list-style-type: circle;
+			margin-top:0.8em;
+		}
+	}
+	ol {
+	margin: 0 0 2em 3em;
+		list-style-type: decimal;
+		ol {
+			list-style-type: lower-alpha;
+			margin-top:0.8em;
+		}
+	}
+	li {
+		margin: 0 0 0.5em
+	}
+}
+.sidebar p {
+	font-size:1rem;
 }

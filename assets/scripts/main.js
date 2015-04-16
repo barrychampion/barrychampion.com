@@ -139,7 +139,7 @@ jQuery(document).ready(function($){
 		}
 	});*/
 	
-	 document.createElement( "picture" );
+	document.createElement( "picture" );
 	
 	$(".project").click(function() {
 		  window.location = $(this).find("a").attr("href"); 

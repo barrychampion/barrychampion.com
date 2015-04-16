@@ -5,7 +5,7 @@ select {
   font-family: $bc-font-family;
 }
 fieldset {
-  background-color: white;
+  background-color: transparent;
   border: none;
   margin: 0 0 .75em;
   padding: 0;
@@ -15,4 +15,13 @@ label {
 }
 .main form {
 	margin: 0 0 3em
+}
+.frm_hidden {
+	display:none;
+}
+#{$all-text-inputs},
+select[multiple=multiple],
+textarea {
+  background-color: transparent;
+	border-color: #ccc;
 }

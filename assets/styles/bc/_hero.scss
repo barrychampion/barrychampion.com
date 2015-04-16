@@ -12,14 +12,27 @@
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1920x1255.jpg);
 	}
 	@media only (min-width: $M) and (max-width: $L) {
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+			background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1920x1255.jpg);
+		}
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1170x765.jpg);
 	}
 	@media only (min-width: $S) and (max-width: $M) {
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+			background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-1920x1255.jpg);
+		}
 		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-768x502.jpg);
 	}
 	@media only screen and (max-width: $S) {
-		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-320x209.jpg);
+		background-image: url(/bc/wp-content/uploads/2015/04/milford-sound-dark-640x418.jpg);
 	}
+	
+	
+	
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -41,7 +54,7 @@
 		left: 50%;
 		top:58%;
 		@include media($M) {
-			top:56%;
+			top:55%;
 		}
 		@include media($L) {
 			top:52%;
@@ -52,13 +65,24 @@
 		padding: 3em 2em;
 	}
 		h1 {
-			font-size:1.2rem;
-			font-weight: 400;
+			font: {
+				weight: 200;
+				size:1.2rem;
+			}
+			@include media($L) {
+				font-size:1.5rem;
+			}
 			text-shadow: $bc-shadow;
-			margin: 0 0 1.5em;
+			margin: 0.5em 0 1.5em;
+
 			span {
-				font-size:3.4rem;
-				font-weight: 700;
+				font:{
+					size:2.8rem;
+					weight: 700;
+				}
+				@media screen and (min-width: 360px) {
+					font-size:3.2rem;
+				}
 				@include media($M) {
 					font-size:6.5rem;
 				}
@@ -67,24 +91,18 @@
 				}
 			}
 		}
-		h2 {
-			font-weight: 400;
-			color: rgba(white, .8);
-			margin-bottom: 2em
-		}
 		p {
 			line-height: 1.4em;
 			margin: 0 auto 2em auto;
 			color: rgba(white, .8);
 		}
 	.button {
-		background-color: rgba(white, .1);
 		border-color: rgba(white, .8);
 		color: rgba(white, .8);
 		&:hover {
 			border-color: white;
 			color: white;
-			background-color: rgba(white, .2);
+			background-color: rgba(black, .4);
 		}
 	}
 }

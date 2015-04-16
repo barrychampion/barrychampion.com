@@ -1,0 +1,91 @@
+.footer {
+	background-color: #ddd;
+	border-top: 4px solid #ccc;
+
+	@include clearfix;
+	.svg-face {
+		width:150px;
+		height: auto;
+		opacity: .8;
+		margin: 1em auto 2em;
+		@include MQ(M) {
+			float: left;
+			margin: 0 2em 2em ;
+		}
+	}
+	a {
+		@include transition(.2s);
+		color: rgba(black, .6);
+		&:active, 
+		&:hover, 
+		&:focus {
+			color: black;
+		}
+	}
+	hr {
+		border-color: rgba($grey, .2);
+	}
+		small {
+		color: rgba($grey, .8)
+	}
+	h3 {
+		font-size:2em;
+		@include MQ(M) {
+			margin: 0.7em 0 0.2em 0
+		}
+	}
+	.social {
+		@include outer-container;
+			@include MQ(M) {
+				margin-right: 1em;
+				text-align: right
+			}
+
+		a {
+			margin: 2em auto 0;
+			@include MQ(M) {
+				margin-top: 0.5em;
+			}
+			@include span-columns(4);
+			opacity: 0.8;
+		}
+		a:hover {
+			opacity: 1;
+		}
+		img {
+			height:54px;
+			width:54px;
+		}
+	}
+}
+.footer-links {
+	@include outer-container;
+	max-width: $L; // breakpoints inside partials > _layout.scss
+	padding: 2em 1.2em 2em;
+	@include MQ(M) {
+		padding: 2em 1.5em 2em;
+	}
+	@include MQ(L) {
+		padding: 2em;
+	}
+	@media only screen and (max-width: $M) {
+		text-align: center;
+	}
+	.first {
+		@include MQ(M) {
+			@include span-columns(8);
+		}
+	}
+	.second {
+		@include MQ(M) {
+			@include span-columns(4);
+		}
+	}
+}
+.footer-copy {
+	@include outer-container;
+	max-width: $L; // breakpoints inside partials > _layout.scss
+	text-align: center;
+	padding: 2em;
+	@include clearfix;
+}

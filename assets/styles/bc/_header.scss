@@ -12,9 +12,9 @@
 	}
 	.logo {
 		position: absolute;
-		top: 0.85em;
+		top: 0.9em;
 		left: 1.2em;
-		font {
+		font: {
 			family:$bc-header;
 			size: 1rem;
 			weight: 400;
@@ -23,11 +23,10 @@
 		line-height: 1.1em;
 		@include MQ(M) {
 			font-size: 1.2rem;
-			left: 1.5em;
 		}
 		@include MQ(L) {
 			font-size: 1.2rem;
-			left: 2em;
+			left: 1.7em;
 		}
 		span {
 			display: none;
@@ -40,6 +39,9 @@
 			@include MQ(M) {
 				font-size: 1.6rem;
 			}
+		}
+		img {
+			height:30px
 		}
 	}
 	@media only screen and (max-width: $L) {
@@ -86,7 +88,6 @@
 		}
 	}
 }
-
 .home .header {
 	@include transition(background-color .3s);
 	background-color: transparent;
@@ -116,7 +117,7 @@
 		a {
 			color: $blue;
 			&:active, &:hover, &:focus {
-				color: darken($blue, 10);
+				color: darken($blue, 15%);
 			}
 		}
 	}
@@ -180,7 +181,6 @@
 	@include MQ(M) {
 		padding-left: 1em;
 		line-height: 30px;
-		right: 2.2em;
 		.menu-text {
 			display: inline-block;
 		}
@@ -200,6 +200,7 @@
 		/* Only apply the following to S & M.
 		By default the navigation is hidden on top of the viewport */
 		
+		font-size: 2rem;
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -220,7 +221,6 @@
 		@include transition-property(transform);
 		@include transition-duration(.3s);
 		li {
-			@include font-size(22px);
 			margin: .2em 0;
 			text-transform: capitalize;
 		}
@@ -249,7 +249,7 @@
 		
 		li {
 			display: inline-block;
-			margin: 0 2.2em;
+			margin: 0 0 0 4em;
 		}
 		a {
 			display: inline-block;

@@ -4,15 +4,17 @@
 
 <body class="projects archive">
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
-	<section class="content" role="document">
-		<div class="page-header">
-			<h1><?php post_type_archive_title( $display ); ?></h1>
-		</div>
-		<main role="main">
+	
+	<section class="wrap content" role="document">
+		
+		<h1 class="ph"><?php post_type_archive_title( $display ); ?></h1>
+		
+		<main class="main" role="main">
 			<?php include Wrapper\template_path(); ?>
 		</main>
-		<!-- /.main -->
+		
 	</section>
+	
 	<?php get_template_part( 'templates/footer'); wp_footer(); ?>
 </body>
 

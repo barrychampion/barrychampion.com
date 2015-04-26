@@ -5,8 +5,7 @@ html.front-page {
 body {
 	height:100%;
 	margin: 0;
-}
-body.page {
+
     /**
     * 1. Making the <body> element behave like a flexbox container.
     * 2. Making flex children line up vertically (horizontal is default)
@@ -36,6 +35,9 @@ body.page {
     /* [3] */
     min-height: 100vh;
 }
+body.home {
+	display: block;
+}
 .wrap {
 /* Pepperidge Farm remembers. */
     -webkit-box-flex: 1 0 auto;
@@ -46,8 +48,8 @@ body.page {
     /* prefixed webkit syntax */
     -webkit-flex: 1 0 auto;
 }
-header, footer {
-	flex-shrink: 0; /* 2 */
+.flexboxtweener, .flexboxtweener>body {
+  height: 100%;
 }
 .container {
 	@include outer-container;
@@ -64,18 +66,5 @@ header, footer {
 	}
 	@include MQ(L) {
 		padding: 0 2em 2em;
-	}
-}
-
-.contact {
-	.main {
-		@include MQ(M) {
-			@include span-columns(8);
-		}
-	}
-	.sidebar {
-		@include MQ(M) {
-			@include span-columns(4);
-		}
 	}
 }

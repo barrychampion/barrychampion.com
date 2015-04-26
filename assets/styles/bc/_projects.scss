@@ -7,46 +7,48 @@
 		@include flex-wrap(wrap);
 		@include justify-content(space-between);
 	}
-	.project {
-		position: relative;
-		box-shadow: 0 1px 2px rgba(black, .2);
-		cursor: pointer;
-		background-color: white;
-		@include transition (all 0.2s ease-in-out);
-		@include span-columns(12);
-		@include display-context(table);
-		margin: 0 0 1.5em;
-		line-height: 0;
-		@include MQ(M) {
-			@include span-columns(6);
-			@include omega;
-		}
-		@include MQ(L) {
-			@include span-columns(3);
-			@include omega;
-			
-		}
-		img {
-			height: auto;
-			margin: 0;
-			border-bottom: 1px solid rgba(black, .1);
+}
+.project {
+	position: relative;
+	//box-shadow: 0 1px 2px rgba(black, .2);7
+	border-bottom: 4px solid rgba(black, .15);
+	border-radius: $bc-border-radius;
+	cursor: pointer;
+	background-color: white;
+	@include transition (all 0.2s ease-in-out);
+	@include span-columns(12);
+	@include display-context(table);
+	margin: 0 0 1.5em;
+	line-height: 0;
+	@include MQ(M) {
+		@include span-columns(6);
+		@include omega;
+	}
+	@include MQ(L) {
+		@include span-columns(3);
+		@include omega;
 
-		}
-		header {
-			padding: 1em;
-		}
-		h2 {
-			margin: 0;
-			font: {
-				family: $bc-font-family;
-				weight:400;
-			}
-			@include MQ(L) {
-				font-size: 1rem;
-			}
+	}
+	img {
+		height: auto;
+		margin: 0;
+		border-bottom: 1px solid rgba(black, .1);
+
+	}
+	header {
+		padding: 1.5em 1em;
+	}
+	h2 {
+		margin: 0;
+		font: {
+			family: $bc-font-family;
+			weight:400;
+			size:1em;
 		}
 	}
-	.project:hover {
-		box-shadow: 1px 1px 5px $grey;
-	}
+}
+.project:hover {
+	//box-shadow: 1px 1px 5px $grey;
+	border-bottom: 4px solid $blue;
+	opacity: .8;
 }

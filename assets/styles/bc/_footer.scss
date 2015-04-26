@@ -1,8 +1,6 @@
 .footer {
 	background-color: #ddd;
 	border-top: 4px solid #ccc;
-
-	@include clearfix;
 	.svg-face {
 		width:150px;
 		height: auto;
@@ -10,7 +8,7 @@
 		margin: 1em auto 2em;
 		@include MQ(M) {
 			float: left;
-			margin: 0 2em 2em ;
+			margin: 0 3em 2em 2em ;
 		}
 	}
 	a {
@@ -35,6 +33,10 @@
 		}
 	}
 	.social {
+		margin-top:2em;
+			@include MQ(M) {
+				margin-top: 1.8em;
+			}
 		@include outer-container;
 			@include MQ(M) {
 				margin-right: 1em;
@@ -42,10 +44,8 @@
 			}
 
 		a {
-			margin: 2em auto 0;
-			@include MQ(M) {
-				margin-top: 0.5em;
-			}
+			font-size:2em;
+			margin: 0 auto;
 			@include span-columns(4);
 			opacity: 0.8;
 		}
@@ -57,6 +57,8 @@
 			width:54px;
 		}
 	}
+	display: block;
+	width: 100%;
 }
 .footer-links {
 	@include outer-container;
@@ -87,5 +89,4 @@
 	max-width: $L; // breakpoints inside partials > _layout.scss
 	text-align: center;
 	padding: 2em;
-	@include clearfix;
 }

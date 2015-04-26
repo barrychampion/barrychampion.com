@@ -1,7 +1,9 @@
 body {
+	@include font-smoothing;
+	@include font-feature-settings("kern", "liga", "pnum");
+	-webkit-font-smoothing: antialiased;
 	font: {
 		family: $bc-font-family;
-		@include font-smoothing;
 	}
 	color: rgba(black,
 	.8);
@@ -19,18 +21,31 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $bc-header;
-	@include font-smoothing;
+	family: $bc-header;
 	margin: 0 0 0.5em;
 	font-weight: 400;
-	font-size: 1.2rem;
+	font-size: 1.27rem;
 }
 
 h1 {
 	font-size: 2rem;
 	@include MQ(M) {
-		font-size: 2.6rem;
+		font-size: 2.68rem;
 	}
+	font-weight: 700;
+}
+
+.ph {
+	font-family: $bc-header;
+}
+
+.main h2 {
+	font-family: $bc-header;
+	font-size: 1.6em;
+	margin: 2em 0 0.5em;
+}
+
+h3 {
 	font-weight: 700;
 }
 
@@ -39,20 +54,24 @@ button,
 .button {
 	@include transition(.2s);
 	color: $blue;
-	&:active,
-	&:focus,
-	&:hover {
-	color: darken($blue, 15%);
+	text-decoration: none;
+	&:active, &:focus, &:hover {
+		color: darken($blue, 10%);
 	}
-
 	&:active,
 	&:focus {
-	outline: none;
+		outline: none;
 	}
 }
 
 .sidebar h3 {
 	font-size: 2em;
+}
+
+hr {
+	border-left: none;
+	border-right: none;
+	border-top: none;
 }
 
 img,
@@ -62,6 +81,7 @@ picture {
 	height: auto;
 	//@include image-rendering(optimizeSpeed);
 }
+
 figure {
 	background-color: #eee;
 	color: $grey;
@@ -74,34 +94,33 @@ figure {
 		margin: 0;
 	}
 }
+
 iframe {
 	line-height: 0;
 }
-.main h2 {
-	font-size: 1.6em;
-	margin:2em 0 0.5em;
-}
+
 main {
 	ul {
-	margin: 0 0 2em 3em;
-	list-style-type: disc;
+		margin: 0 0 2em 3em;
+		list-style-type: disc;
 		ul {
 			list-style-type: circle;
-			margin-top:0.8em;
+			margin-top: 0.8em;
 		}
 	}
 	ol {
-	margin: 0 0 2em 3em;
+		margin: 0 0 2em 3em;
 		list-style-type: decimal;
 		ol {
 			list-style-type: lower-alpha;
-			margin-top:0.8em;
+			margin-top: 0.8em;
 		}
 	}
 	li {
 		margin: 0 0 0.5em
 	}
 }
+
 .sidebar p {
-	font-size:1rem;
+	font-size: 1rem;
 }

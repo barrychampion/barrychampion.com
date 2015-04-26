@@ -8,7 +8,8 @@
 	@include MQ(M) {
 		height: $header-height-M;
 		background-color: white;
-		box-shadow: 0 1px 2px rgba(black, .2);
+		//box-shadow: 0 1px 2px rgba(black, .2);
+		border-bottom: 2px solid rgba(black, .1);
 	}
 	.logo {
 		position: absolute;
@@ -34,14 +35,11 @@
 		strong {
 			font {
 				weight: 700;
-				size: 1.3rem;
+				size: 1.361rem;
 			}
 			@include MQ(M) {
-				font-size: 1.6rem;
+				font-size: 1.661rem;
 			}
-		}
-		img {
-			height:30px
 		}
 	}
 	@media only screen and (max-width: $L) {
@@ -55,6 +53,20 @@
 			}
 		}
 	}
+	.social {
+		display: none;
+		@include MQ(L) {
+			display: block;
+			position: absolute;
+			right:1em;
+			top:1em;
+			font-size:1.6rem;
+			line-height: 0;
+			a {
+				margin-left: 2em;
+			}
+		}
+	}
 	@include MQ(L) {
 		@include transition(background-color .3s);
 		/* Force Hardware Acceleration in WebKit */
@@ -63,7 +75,8 @@
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		background-color: white;
-		box-shadow: 0 1px 2px rgba(black, .2);
+		//box-shadow: 0 1px 2px rgba(black, .2);
+		border-bottom: 2px solid rgba(black, .1);
 		&.is-fixed {
 			/* when the user scrolls down, we hide the header right above the viewport */
 			
@@ -79,7 +92,8 @@
 			
 			@include transform(translate3d(0, 100%, 0));
 			background-color: white;
-			box-shadow: 0 1px 2px rgba(black, .2);
+			//box-shadow: 0 1px 2px rgba(black, .2);
+			border-bottom: 2px solid rgba(black, .1);
 		}
 		&.menu-is-open {
 			/* add a background color to the header when the navigation is open */
@@ -91,7 +105,7 @@
 .home .header {
 	@include transition(background-color .3s);
 	background-color: transparent;
-	box-shadow: none;
+	border: none;
 	a {
 		color: rgba(white, .8);
 		&:active, &:hover, &:focus {
@@ -113,7 +127,8 @@
 		
 		@include transform(translate3d(0, 100%, 0));
 		background-color: white;
-		box-shadow: 0 1px 2px rgba(black, .2);
+		//box-shadow: 0 1px 2px rgba(black, .2);
+		border-bottom: 2px solid rgba(black, .1);
 		a {
 			color: $blue;
 			&:active, &:hover, &:focus {
@@ -126,7 +141,7 @@
 .primary-nav-trigger,
 {
 	position: fixed;
-	right: 1em;
+	right: 1.5em;
 	top: 0.8em;
 	height: 54px;
 	width: 54px;
@@ -209,7 +224,7 @@
 		background-color: black;
 		z-index: $nav-zindex;
 		text-align: center;
-		padding: $header-height-S 0;
+		padding: 100px 0;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		overflow: auto;
@@ -244,7 +259,7 @@
 	@include MQ(L) {
 		position: absolute;
 		@include center(y);
-		right: 2.6em;
+		right: 18.1em;
 		/* hidden on small devices */
 		
 		li {

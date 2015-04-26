@@ -1,12 +1,26 @@
 
 $bc-font-family: 'Open Sans', sans-serif;
 $bc-header: 'Montserrat', sans-serif;
-$bc-border-radius: 5px;
+$bc-border-radius: 10px;
+
+// Font Sizes
+$bc-font-size: 1em;
+
+// Line height
+$bc-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$bc-border-radius: 3px;
+$bc-spacing: $bc-line-height * 1em;
+$small-spacing: $bc-spacing / 2;
+$bc-z-index: 0;
+
 
 // colors
 
 $grey: #666;
-$blue: #3498db;
+$blue: #2098d1;
 $green: #1abc9c;
 $red: #fff;
 $yellow: #fff;
@@ -14,8 +28,6 @@ $yellow: #fff;
 // Font Colors
 $action-color: transparent;
 $bc-shadow: 0.5px 0.5px 0.5px rgba(black, .1);
-
-// fonts 
 
 //header height
 

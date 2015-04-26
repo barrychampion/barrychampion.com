@@ -1,7 +1,32 @@
-.contact button {
-	margin-top: 1em;
-	@media only screen and (max-width: $M) {
-		width:100%;
-		padding: 2em;
+/*.contact {
+	.main {
+		@include MQ(M) {
+			@include span-columns(8);
+		}
+	}
+	.sidebar {
+		@include MQ(M) {
+			@include span-columns(4);
+		}
+	}
+}*/
+
+.contact {
+	/*@include MQ(M) {
+		fieldset {
+			@include span-columns(8);
+			@include shift(2);
+			margin-bottom: 2em;
+		}
+	}*/
+	.frm_submit {
+		text-align: center;
+
+	}
+	button {
+		margin: 1em  0;
+		@media only screen and (max-width: $M) {
+			padding: 2em;
+		}
 	}
 }

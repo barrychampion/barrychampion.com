@@ -129,16 +129,6 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	/*$(window).scroll(function() {    
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 100) {
-			$(".primary-nav-trigger").addClass("fixed-bottom");
-		} else {
-			$(".primary-nav-trigger").removeClass("fixed-bottom");
-		}
-	});*/
-	
 	document.createElement( "picture" );
 	
 	$(".project").click(function() {
@@ -149,5 +139,13 @@ jQuery(document).ready(function($){
 	/*$(function(){
 	  $('#mixItUp').mixItUp();
 	});*/
+	
+	// Add a Modernizr-test for the weird, inbetween, flexbox implementation
+	// in IE10, necessary for the "sticky" footer.
+	// (See https://github.com/Modernizr/Modernizr/issues/812)
+	// (This could be rolled into a custom Modernizr build in production later.)
+	Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
+	
+	$("img").unveil(200);
 	
 });

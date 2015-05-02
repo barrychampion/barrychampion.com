@@ -24,3 +24,57 @@
     font-style: normal;
 
 }
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-dp9yba');
+	src:url('../fonts/icomoon.eot?#iefix-dp9yba') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-dp9yba') format('woff'),
+		url('../fonts/icomoon.ttf?-dp9yba') format('truetype'),
+		url('../fonts/icomoon.svg?-dp9yba#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"],
+.navicon a {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+.navicon span {
+	display:none
+}
+.icon-instagram:before,
+.navicon.instagram a:before {
+	content: "\ea90";
+}
+
+.icon-twitter:before {
+	content: "\ea91";
+}
+
+.icon-github:before,
+.navicon.github a:before {
+	content: "\eab1";
+}
+
+.icon-soundcloud:before {
+	content: "\eac4";
+}
+
+.icon-linkedin2:before,
+.navicon.linkedin a:before {
+	content: "\eac9";
+}
+
+.icon-paypal:before {
+	content: "\ead6";
+}
+
+.icon-codepen:before {
+	content: "\eae4";
+}

@@ -19,7 +19,7 @@ button, .button {
 	&:hover,
 	&:focus {
 		color: white;
-		background-color:darken($blue, 10%);
+		background-color:darken($blue, 5%);
 		}
 	&:disabled {
 		cursor: not-allowed;

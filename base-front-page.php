@@ -13,15 +13,44 @@
 			<p><?php bloginfo('description'); ?></p>
 			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
 		</div>
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
 	</section>
-
+	<div class="spinner">
+		<div class="double-bounce1"></div>
+		<div class="double-bounce2"></div>
+	</div>
 	<section role="document">
 		<main role="main">
 			<?php include Wrapper\template_path(); ?>
+			<div class="responsive container content">
+				<?php
+					$home = types_render_field("section-1", array("separator"=>";"));
+					//Output home section 1
+					echo $home;
+				?>
+			</div>
+			<div class="web-design">
+				<div class="container content">
+				<?php
+					$home = types_render_field("section-2", array("separator"=>";"));
+					//Output home section 2
+					echo $home;
+				?>
+				</div>
+			</div>
+			<div class="cms container content">
+				<?php
+					$home = types_render_field("section-3", array("separator"=>";"));
+					//Output home section 3
+					echo $home;
+				?>
+				</div>
 		</main>
 	</section>
 
 	<?php get_template_part( 'templates/footer'); wp_footer(); ?>
 </body>
-
 </html>

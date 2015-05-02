@@ -16,54 +16,28 @@
 		top: 0.9em;
 		left: 1.2em;
 		font: {
-			family:$bc-header;
 			size: 1rem;
 			weight: 400;
 		}
-		z-index: 10;
-		line-height: 1.1em;
+		line-height: 1.2em;
 		@include MQ(M) {
 			font-size: 1.2rem;
+			line-height: 1.2em;
 		}
 		@include MQ(L) {
-			font-size: 1.2rem;
 			left: 1.7em;
 		}
 		span {
 			display: none;
 		}
 		strong {
-			font {
+			font: {
+				family:$bc-header;
 				weight: 700;
 				size: 1.361rem;
 			}
 			@include MQ(M) {
 				font-size: 1.661rem;
-			}
-		}
-	}
-	@media only screen and (max-width: $L) {
-		&.menu-is-open {
-			.logo {
-				position: fixed;
-				color: rgba(white, .8);
-				&:active, &:hover, &:focus {
-					color: white;
-				}
-			}
-		}
-	}
-	.social {
-		display: none;
-		@include MQ(L) {
-			display: block;
-			position: absolute;
-			right:1em;
-			top:1em;
-			font-size:1.6rem;
-			line-height: 0;
-			a {
-				margin-left: 2em;
 			}
 		}
 	}
@@ -224,7 +198,7 @@
 		background-color: black;
 		z-index: $nav-zindex;
 		text-align: center;
-		padding: 100px 0;
+		padding: 80px 0;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		overflow: auto;
@@ -240,14 +214,10 @@
 			text-transform: capitalize;
 		}
 		a {
-			color: white;
+			color: rgba(white, .5);
 			display: inline-block;
 			width: 100%;
 			padding: .4em 1em;
-			@include transition(background .2s);
-			.no-touch &:hover {
-				background-color: rgba(white, .1);
-			}
 		}
 		a:hover {
 			color: white;
@@ -255,11 +225,14 @@
 		&.is-visible {
 			@include transform(translateY(0));
 		}
+		.navicon a:before {
+			font-size: 3rem;
+		}
 	}
 	@include MQ(L) {
 		position: absolute;
 		@include center(y);
-		right: 18.1em;
+		right: 2em;
 		/* hidden on small devices */
 		
 		li {
@@ -269,8 +242,9 @@
 		a {
 			display: inline-block;
 		}
+		.navicon a:before {
+			font-size: 1.6rem;
+		}
+
 	}
-}
-body.overflow-hidden {
-  overflow: hidden;
 }

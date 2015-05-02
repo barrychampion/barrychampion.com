@@ -62,3 +62,6 @@ add_image_size( 'thumbnail@2x', 150, 0 );
 add_image_size( 'medium@2x', 1024, 0 );
 add_image_size( 'large@2x', 1920, 0 );
 add_image_size( 'small@2x', 640, 0 );
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );

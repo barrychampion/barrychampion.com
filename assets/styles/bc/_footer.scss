@@ -1,6 +1,9 @@
 .footer {
 	background-color: #ddd;
 	border-top: 4px solid #ccc;
+	display: block;
+	width: 100%;
+	//@include clearfix;
 	.svg-face {
 		width:150px;
 		height: auto;
@@ -17,7 +20,7 @@
 		&:active, 
 		&:hover, 
 		&:focus {
-			color: black;
+			color: rgba(black, .8);
 		}
 	}
 	hr {
@@ -44,7 +47,7 @@
 			}
 
 		a {
-			font-size:2em;
+			font-size:2.21em;
 			margin: 0 auto;
 			@include span-columns(4);
 			opacity: 0.8;
@@ -57,8 +60,6 @@
 			width:54px;
 		}
 	}
-	display: block;
-	width: 100%;
 }
 .footer-links {
 	@include outer-container;

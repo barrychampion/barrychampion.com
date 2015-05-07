@@ -1,9 +1,9 @@
 .footer {
 	background-color: #ddd;
 	border-top: 4px solid #ccc;
-	display: block;
 	width: 100%;
-	//@include clearfix;
+	z-index: 1;
+	@include clearfix;
 	.svg-face {
 		width:150px;
 		height: auto;
@@ -26,7 +26,7 @@
 	hr {
 		border-color: rgba($grey, .2);
 	}
-		small {
+	small {
 		color: rgba($grey, .8)
 	}
 	h3 {

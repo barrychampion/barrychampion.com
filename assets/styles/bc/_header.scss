@@ -13,7 +13,7 @@
 	}
 	.logo {
 		position: absolute;
-		top: 0.9em;
+		top: 0.8em;
 		left: 1.2em;
 		font: {
 			size: 1rem;
@@ -112,78 +112,6 @@
 	}
 }
 
-.primary-nav-trigger,
-{
-	position: fixed;
-	right: 1.5em;
-	top: 0.8em;
-	height: 54px;
-	width: 54px;
-	border-radius: 50%;
-	background-color: rgba($grey, .2);
-	cursor: pointer;
-	z-index: 10;
-	.menu-icon {
-		/* this span is the central line of the menu icon */
-		
-		display: inline-block;
-		position: absolute;
-		@include center; // mixin inside partials > _mixins.scss
-		width: 24px;
-		height: 2px;
-		background-color: white;
-		@include transition(background-color .3s);
-		/* these are the upper and lower lines in the menu icon */
-		
-		&::before, &:after {
-			content: '';
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			background-color: white;
-			right: 0;
-			-webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
-			-moz-transition: -moz-transform .3s, top .3s, background-color 0s;
-			transition: transform .3s, top .3s, background-color 0s;
-		}
-		&::before {
-			top: -5px;
-		}
-		&::after {
-			top: 5px;
-		}
-		&.is-clicked {
-			background-color: rgba(white, 0);
-			&::before, &::after {
-				background-color: rgba(white, 1);
-			}
-			&::before {
-				top: 0;
-				@include transform(rotate(135deg));
-			}
-			&::after {
-				top: 0;
-				@include transform(rotate(225deg));
-			}
-		}
-	}
-	@include MQ(M) {
-		padding-left: 1em;
-		line-height: 30px;
-		.menu-text {
-			display: inline-block;
-		}
-		.menu-icon {
-			left: auto;
-			right: 1em;
-			@include transform(translateX(0) translateY(-50%));
-		}
-	}
-	@include MQ(L) {
-		display: none;
-	}
-}
-
 .primary-nav {
 	@media only screen and (max-width: $L) {
 		/* Only apply the following to S & M.
@@ -247,4 +175,77 @@
 		}
 
 	}
+}
+.primary-nav-trigger{
+	position: fixed;
+	right: 1.5em;
+	top: 0.8em;
+	height: 54px;
+	width: 54px;
+	border-radius: 50%;
+	background-color: rgba(black, .1);
+	cursor: pointer;
+	z-index: 10;
+	.menu-icon {
+		/* this span is the central line of the menu icon */
+		
+		display: inline-block;
+		position: absolute;
+		@include center; // mixin inside partials > _mixins.scss
+		width: 24px;
+		height: 2px;
+		background-color: white;
+		@include transition(background-color .3s);
+		/* these are the upper and lower lines in the menu icon */
+		
+		&::before, &:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: white;
+			right: 0;
+			-webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+			-moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+			transition: transform .3s, top .3s, background-color 0s;
+		}
+		&::before {
+			top: -5px;
+		}
+		&::after {
+			top: 5px;
+		}
+		&.is-clicked {
+			background-color: rgba(white, 0);
+			&::before, &::after {
+				background-color: rgba(white, 1);
+			}
+			&::before {
+				top: 0;
+				@include transform(rotate(135deg));
+			}
+			&::after {
+				top: 0;
+				@include transform(rotate(225deg));
+			}
+		}
+	}
+	@include MQ(M) {
+		padding-left: 1em;
+		line-height: 30px;
+		.menu-text {
+			display: inline-block;
+		}
+		.menu-icon {
+			left: auto;
+			right: 1em;
+			@include transform(translateX(0) translateY(-50%));
+		}
+	}
+	@include MQ(L) {
+		display: none;
+	}
+}
+.secondary-nav {
+	display: none;
 }

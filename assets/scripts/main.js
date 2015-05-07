@@ -22,23 +22,30 @@
     // All pages
     'common': {
       init: function() {
+        // JavaScript to be fired on all pages
 		FastClick.attach(document.body);
 		  
-        // JavaScript to be fired on all pages
-		/*WebFontConfig = {
+		WebFontConfig = {
 		  custom: {
 			families: ['Open Sans', 'Montserrat', 'icomoon'],
 		  }
-		};*/
+		};
+		// Add a Modernizr-test for the weird, inbetween, flexbox implementation
+		// in IE10, necessary for the "sticky" footer.
+		// (See https://github.com/Modernizr/Modernizr/issues/812)
+		// (This could be rolled into a custom Modernizr build in production later.)
+		Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+	  
       }
     },
     // Home page
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+		  
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -54,11 +61,30 @@
     'projects': {
       init: function() {
         // JavaScript to be fired on the projects
+		$('main').mixItUp({
+			animation: {
+				enable: false		
+			},
+			callbacks: {
+				onMixLoad: function(){
+					$(this).mixItUp('setOptions', {
+						animation: {
+							enable: true,
+							effects: 'fade',
+							easing: 'ease',
+							duration: 200
+						}
+					});
+					/*$(this).on('mixEnd', function(e, state) {
+						$(window).lazyLoadXT();
+					});*/
+				}
+			}
+		});
 		$(".project").click(function() {
 		  window.location = $(this).find("a").attr("href"); 
 		  return false;
 		});
-	
       }
     }
   };
@@ -146,11 +172,4 @@ jQuery(document).ready(function($){
 			});	
 		}
 	});
-	
-	// Add a Modernizr-test for the weird, inbetween, flexbox implementation
-	// in IE10, necessary for the "sticky" footer.
-	// (See https://github.com/Modernizr/Modernizr/issues/812)
-	// (This could be rolled into a custom Modernizr build in production later.)
-	//Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
-
 });

@@ -10,7 +10,7 @@ button, .button {
 	cursor: pointer;
 	display: inline-block;
 	line-height: 1;
-	padding: 0.75em 1.5em;
+	padding: 1em 2em;
 	text-decoration: none;
 	user-select: none;
 	vertical-align: middle;
@@ -18,8 +18,8 @@ button, .button {
 	&:active,
 	&:hover,
 	&:focus {
-		color: white;
 		background-color:darken($blue, 5%);
+		color: white;
 		}
 	&:disabled {
 		cursor: not-allowed;

@@ -29,4 +29,24 @@
 			width:100%;
 		}
 	}
+	hr {
+    padding: 0;
+    border: none;
+    border-top: 2px solid rgba(black, .1);
+    text-align: center;
+	color:rgba(black, .4);
+	}
+	hr:after {
+		content: "or";
+		display: inline-block;
+		position: relative;
+		top: -0.85em;
+		font-size: 1.5em;
+		padding: 0 0.25em;
+		background: white;
+	}
+	.ph {
+		font-family: $bc-font-family;
+		text-align: center;
+	}
 }

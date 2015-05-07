@@ -13,15 +13,7 @@
 			<p><?php bloginfo('description'); ?></p>
 			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
 		</div>
-		<div class="spinner">
-			<div class="double-bounce1"></div>
-			<div class="double-bounce2"></div>
-		</div>
 	</section>
-	<div class="spinner">
-		<div class="double-bounce1"></div>
-		<div class="double-bounce2"></div>
-	</div>
 	<section role="document">
 		<main role="main">
 			<?php include Wrapper\template_path(); ?>

@@ -1,3 +1,6 @@
+html.front-page {
+	height:100%;
+}
 .hero {
 	position: relative;
 	width: 100%;
@@ -58,6 +61,17 @@
 		line-height: 1.4em;
 		margin: 0 auto 2em auto;
 		color: rgba(white, .8);
+	}
+	.button {
+		background-color: transparent;
+		border:2px solid white;
+		background-color: rgba(black, .2);
+		color:white;
+		&:active,
+		&:hover,
+		&:focus {
+			background-color: rgba(black, .4);
+		}
 	}
 }
 

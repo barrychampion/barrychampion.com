@@ -3,9 +3,38 @@
 }
 .projects {
 	main {
+		display: none;
 		@include display(flex);
 		@include flex-wrap(wrap);
 		@include justify-content(space-between);
+	}
+	.controls {
+		font-size:0.8rem;
+		label {
+			display: none;
+		}
+		margin-bottom: 1em;
+		display: inline-block;
+	}
+	.filter {
+		font-size:0.8rem;
+		background-color: rgba(black, .2);
+		&:hover,
+		&:focus {
+			background-color: rgba(black, .4);
+		}
+		margin-bottom: 1em;
+		@include MQ(L) { 
+			padding:0.75em 1.5em;
+			margin: -1.4em 0.5em 0 0;
+		}
+	}
+	.filter.active {
+		background-color: rgba(black, .6);
+	}
+	h1 {
+		display: inline-block;
+		margin-right: 1em;
 	}
 }
 .project {
@@ -14,20 +43,21 @@
 	border-radius: $bc-border-radius;
 	cursor: pointer;
 	background-color: white;
-	@include transition (all 0.2s ease-in-out);
 	@include span-columns(12);
 	@include display-context(table);
 	margin: 0 0 1.5em;
 	line-height: 0;
+	display: none;
 	@include MQ(M) {
 		@include span-columns(6);
 		@include omega;
+		display: none;
 	}
 	@include MQ(L) {
 		max-height: 293px;
 		@include span-columns(3);
 		@include omega;
-
+		display: none;
 	}
 	img {
 		border-bottom: 1px solid rgba(black, .1);

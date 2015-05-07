@@ -7,10 +7,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "webfontloader": "~1.5.18",
     "modernizr": "2.8.3",
     "jquery": "1.11.2",
     "fastclick": "~1.0.6",
-    "picturefill": "~2.3.1"
+    "picturefill": "~2.3.1",
+    "mixitup": "~2.1.7"
   },
   "overrides": {
     "modernizr": {

@@ -1,4 +1,4 @@
-<article class="project mix <?php
+<article class="project <?php
 	$terms = get_the_terms( $post->ID , 'project-types' );
 		foreach ( $terms as $term ) {
 			echo strtolower($term->name).' ';

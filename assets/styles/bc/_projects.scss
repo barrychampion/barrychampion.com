@@ -2,8 +2,7 @@
 	background-color: #eee;
 }
 .projects {
-	main {
-		display: none;
+	.main {
 		@include display(flex);
 		@include flex-wrap(wrap);
 		@include justify-content(space-between);
@@ -32,9 +31,12 @@
 	.filter.active {
 		background-color: rgba(black, .6);
 	}
-	h1 {
-		display: inline-block;
-		margin-right: 1em;
+	
+	@include MQ(M) { 
+		h1 {
+			display: inline-block;
+			margin-right: 1em;
+		}
 	}
 }
 .project {

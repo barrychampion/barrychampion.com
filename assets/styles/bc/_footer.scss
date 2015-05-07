@@ -1,9 +1,10 @@
 .footer {
+	display: inline-table;
+	width: 100%;
 	background-color: #ddd;
 	border-top: 4px solid #ccc;
 	width: 100%;
 	z-index: 1;
-	@include clearfix;
 	.svg-face {
 		width:150px;
 		height: auto;

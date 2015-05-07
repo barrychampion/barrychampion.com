@@ -1,17 +1,18 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "bc",
+  "homepage": "http:barrychampion.com",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Barry Champion <infp@barrychampion.com>"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "webfontloader": "~1.5.18",
-    "modernizr": "2.8.3",
     "jquery": "1.11.2",
+    "modernizr": "2.8.3",
+    "webfontloader": "~1.5.18",
     "fastclick": "~1.0.6",
     "picturefill": "~2.3.1",
+	"lazyloadxt": "~1.0.5",
     "mixitup": "~2.1.7"
   },
   "overrides": {

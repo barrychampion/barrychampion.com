@@ -23,18 +23,35 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-		FastClick.attach(document.body);
 		  
-		WebFontConfig = {
+		/*
+		(function($, dpr) {
+            if (dpr>1) {
+                $.lazyLoadXT.srcAttr = 'data-src-' + (dpr > 2 ? '3x' : (dpr > 1.5 ? '2x' : '1.5x'));
+			}
+        })(jQuery, window.devicePixelRatio || 1);*/
+		
+		WebFont.load({
 		  custom: {
-			families: ['Open Sans', 'Montserrat', 'icomoon'],
+			families: ['Open Sans', 'Montserrat', 'icomoon']
 		  }
-		};
+		});
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' === document.location.protocol ? 'https' : 'http');
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+		  
+		FastClick.attach(document.body);
+
 		// Add a Modernizr-test for the weird, inbetween, flexbox implementation
 		// in IE10, necessary for the "sticky" footer.
 		// (See https://github.com/Modernizr/Modernizr/issues/812)
 		// (This could be rolled into a custom Modernizr build in production later.)
 		Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
+		  
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -61,7 +78,11 @@
     'projects': {
       init: function() {
         // JavaScript to be fired on the projects
+		// use .postbone instead of .lazyload
 		$('main').mixItUp({
+			selectors: {
+				target: '.project'
+			},
 			animation: {
 				enable: false		
 			},
@@ -70,17 +91,18 @@
 					$(this).mixItUp('setOptions', {
 						animation: {
 							enable: true,
-							effects: 'fade',
-							easing: 'ease',
-							duration: 200
+							duration: 300,
+							effects: 'fade stagger(34ms) scale(0.95)',
+							easing: 'ease'
 						}
 					});
-					/*$(this).on('mixEnd', function(e, state) {
-						$(window).lazyLoadXT();
-					});*/
 				}
 			}
 		});
+		$('main').on('mixEnd', function(e, state){
+			$('.project img').lazyLoadXT().trigger('scroll');
+		});
+		  
 		$(".project").click(function() {
 		  window.location = $(this).find("a").attr("href"); 
 		  return false;

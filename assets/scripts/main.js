@@ -24,25 +24,14 @@
       init: function() {
         // JavaScript to be fired on all pages
 		  
-		/*
-		(function($, dpr) {
-            if (dpr>1) {
-                $.lazyLoadXT.srcAttr = 'data-src-' + (dpr > 2 ? '3x' : (dpr > 1.5 ? '2x' : '1.5x'));
-			}
-        })(jQuery, window.devicePixelRatio || 1);*/
-		
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired 
 		WebFont.load({
 		  custom: {
 			families: ['Open Sans', 'Montserrat', 'icomoon']
 		  }
 		});
-		(function() {
-			var wf = document.createElement('script');
-			wf.src = ('https:' === document.location.protocol ? 'https' : 'http');
-			wf.async = 'true';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(wf, s);
-		})();
 		  
 		FastClick.attach(document.body);
 
@@ -51,11 +40,7 @@
 		// (See https://github.com/Modernizr/Modernizr/issues/812)
 		// (This could be rolled into a custom Modernizr build in production later.)
 		Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
-		  
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-	  
+
       }
     },
     // Home page
@@ -76,10 +61,9 @@
     },
     // Projects.
     'projects': {
-      init: function() {
+    	init: function() {
         // JavaScript to be fired on the projects
-		// use .postbone instead of .lazyload
-		$('main').mixItUp({
+        $('main').mixItUp({
 			selectors: {
 				target: '.project'
 			},
@@ -99,6 +83,10 @@
 				}
 			}
 		});
+		  
+      },
+      finalize: function() {
+        // JavaScript to be fired on the projects
 		$('main').on('mixEnd', function(e, state){
 			$('.project img').lazyLoadXT().trigger('scroll');
 		});
@@ -185,13 +173,13 @@ jQuery(document).ready(function($){
 		
 		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $('.primary-nav').hasClass('is-visible') ) {
-			$('.primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+			$('.primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'/*,function(){
 				$('body').removeClass('overflow-hidden');
-			});
+			}*/);
 		} else {
-			$('.primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+			$('.primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'/*,function(){
 				$('body').addClass('overflow-hidden');
-			});	
+			}*/);	
 		}
 	});
 });

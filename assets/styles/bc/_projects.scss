@@ -13,6 +13,9 @@
 			display: none;
 		}
 		margin-bottom: 1em;
+		@include MQ(L) { 
+			margin-bottom: 1.5em;
+		}
 		display: inline-block;
 	}
 	.filter {
@@ -27,17 +30,18 @@
 			padding:0.75em 1.5em;
 			margin: -1.4em 0.5em 0 0;
 		}
+		@include transition-duration(0)
 	}
 	.filter.active {
 		background-color: rgba(black, .6);
 	}
 	
-	@include MQ(M) { 
+	/*@include MQ(M) { 
 		h1 {
 			display: inline-block;
 			margin-right: 1em;
 		}
-	}
+	}*/
 }
 .project {
 	position: relative;
@@ -72,6 +76,7 @@
 		}
 	}
 	header {
+		//position: relative;
 		padding: 1.5em 1em;
 	}
 	h2 {
@@ -86,4 +91,32 @@
 .project:hover {
 	border-bottom: 4px solid $blue;
 	opacity: .8;
+}
+.single-projects {
+	.content {
+		@include MQ(L) {
+			max-width:$bc-reading-width;
+		}
+	}
+	h1 {
+		position:relative;
+		padding-right:60px;
+		a {
+			position:absolute;
+			top:15px;
+			right:0;
+			font-size: 1.81rem;
+		}	
+	}
+}
+.project-nav {
+	a {
+		font-size: 3.21rem;
+	}
+	a[rel="prev"] {
+		float: right
+	}
+	a[rel="next"] {
+		float: left
+	}
 }

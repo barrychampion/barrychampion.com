@@ -9,7 +9,7 @@
 
 	<section class="hero">
 		<div class="hero-inner">
-			<h1>Yes, my surname really is<br><span>CHAMPION</span></h1>
+			<h1>I know, my surname really is<br><span>CHAMPION</span></h1>
 			<p><?php bloginfo('description'); ?></p>
 			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
 		</div>

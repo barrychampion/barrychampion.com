@@ -36,20 +36,57 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"],
-.navicon a {
+[class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-.navicon span {
-	display:none
+
+.icon-arrow-down:before {
+	content: "\e601";
 }
-.icon-instagram:before,
-.navicon.instagram a:before {
+
+.icon-arrow-left:before {
+	content: "\e602";
+}
+
+.icon-arrow-right:before {
+	content: "\e603";
+}
+
+.icon-arrow-up:before {
+	content: "\e604";
+}
+
+.icon-desktop:before {
+	content: "\e600";
+}
+
+.icon-laptop:before {
+	content: "\e605";
+}
+
+.icon-tablet:before {
+	content: "\e607";
+}
+
+.icon-phone:before {
+	content: "\e606";
+}
+
+.icon-link:before {
+	content: "\e9cb";
+}
+
+.icon-instagram:before {
 	content: "\ea90";
 }
 
@@ -57,17 +94,19 @@
 	content: "\ea91";
 }
 
-.icon-github:before,
-.navicon.github a:before {
+.icon-github:before {
 	content: "\eab1";
+}
+
+.icon-wordpress:before {
+	content: "\eab6";
 }
 
 .icon-soundcloud:before {
 	content: "\eac4";
 }
 
-.icon-linkedin2:before,
-.navicon.linkedin a:before {
+.icon-linkedin2:before {
 	content: "\eac9";
 }
 

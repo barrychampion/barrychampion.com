@@ -1,9 +1,14 @@
 html {
-    overflow-y: scroll;
+	height:100%;
+}
+#instantclick-bar {
+	//background: $blue;
+	display: none;
 }
 body {
 	height:100%;
 	margin: 0;
+    overflow-y: scroll;
 
     /**
     * 1. Making the <body> element behave like a flexbox container.
@@ -54,7 +59,7 @@ body.home {
 
 .content {
 	width: 100%;
-	margin: 5em auto 0;
+	margin: 6em auto 0;
 	padding: 0 1.2em 2em;
 	@include MQ(M) {
 		margin-top: 7em;
@@ -66,4 +71,12 @@ body.home {
 }
 .flexboxtweener, .flexboxtweener>body {
   height: 100%;
+}
+hr {
+    padding: 0;
+    border: none;
+    border-top: 2px solid rgba(black, .1);
+    text-align: center;
+    color:rgba(black, .4);
+    z-index: 0
 }

@@ -10,7 +10,6 @@
 	<section class="wrap container content" role="document">
 
 		<main class="main" role="main">
-			<?php get_template_part( 'templates/page', 'header'); ?>
 			<?php include Wrapper\template_path(); ?>
 		</main>
 

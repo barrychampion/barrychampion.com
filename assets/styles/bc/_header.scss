@@ -2,18 +2,17 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: $header-height-S;
+	height: $header-height-M;
 	width: 100%;
 	z-index: $header-zindex;
 	@include MQ(M) {
-		height: $header-height-M;
 		background-color: white;
 		//box-shadow: 0 1px 2px rgba(black, .2);
 		border-bottom: 2px solid rgba(black, .1);
 	}
 	.logo {
 		position: absolute;
-		top: 0.8em;
+		@include center(y);
 		left: 1.2em;
 		font: {
 			size: 1rem;
@@ -40,6 +39,7 @@
 				font-size: 1.661rem;
 			}
 		}
+		@include transition-duration(0)
 	}
 	@include MQ(L) {
 		@include transition(background-color .3s);
@@ -73,6 +73,19 @@
 			/* add a background color to the header when the navigation is open */
 			
 			background-color: white;
+		}
+	}
+	.social {
+		display: none;
+		@include MQ(L) {
+			display: block;
+			position: absolute;
+			right: 1.2em;
+			@include center(y);
+			font-size:1.61rem;
+			a {
+				margin-left: 2em
+			}
 		}
 	}
 }
@@ -116,14 +129,12 @@
 	@media only screen and (max-width: $L) {
 		/* Only apply the following to S & M.
 		By default the navigation is hidden on top of the viewport */
-		
-		font-size: 2rem;
 		position: fixed;
 		left: 0;
 		top: 0;
 		height: 100%;
 		width: 100%;
-		background-color: black;
+		background-color: #333;
 		z-index: $nav-zindex;
 		text-align: center;
 		padding: 80px 0;
@@ -137,6 +148,7 @@
 		@include transform(translateY(-100%));
 		@include transition-property(transform);
 		@include transition-duration(.3s);
+		
 		li {
 			margin: .2em 0;
 			text-transform: capitalize;
@@ -145,13 +157,16 @@
 			color: rgba(white, .5);
 			display: inline-block;
 			width: 100%;
-			padding: .4em 1em;
 		}
 		a:hover {
 			color: white;
 		}
 		&.is-visible {
 			@include transform(translateY(0));
+			font-size: 2rem;
+			a {
+				padding: .4em 1em;
+			}
 		}
 		.navicon a:before {
 			font-size: 3rem;
@@ -160,7 +175,7 @@
 	@include MQ(L) {
 		position: absolute;
 		@include center(y);
-		right: 2em;
+		right: 18.1em;
 		/* hidden on small devices */
 		
 		li {
@@ -245,7 +260,4 @@
 	@include MQ(L) {
 		display: none;
 	}
-}
-.secondary-nav {
-	display: none;
 }

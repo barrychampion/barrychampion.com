@@ -12,7 +12,7 @@
     "webfontloader": "~1.5.18",
     "fastclick": "~1.0.6",
     "picturefill": "~2.3.1",
-	"lazyloadxt": "~1.0.5",
+    "lazyloadxt": "~1.0.5",
     "mixitup": "~2.1.7"
   },
   "overrides": {

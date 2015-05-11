@@ -1,0 +1,33 @@
+@include MQ(L) {
+.about {
+	.ph, p, h2, hr {
+			max-width:$bc-reading-width;
+			margin: 0 auto;
+	}
+	figure {
+		margin-top:3em
+	}
+	figcaption {
+		margin: 0 auto 3em;
+		max-width:$bc-reading-width;
+		  padding: .6em 0 1.3em;
+	}
+	.ph {
+		margin: 0 auto .5em;	
+	}
+	p {
+
+		margin: 0 auto 1em;
+	}
+	h2 {
+		margin: 0 auto 0.83em;
+	}
+	ul {
+		max-width:$bc-reading-width;
+		margin: 0 auto 2em;
+		li {
+			margin-left:3em;
+		}
+	}
+}
+}

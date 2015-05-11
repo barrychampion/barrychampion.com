@@ -1,6 +1,3 @@
-html.front-page {
-	height:100%;
-}
 .hero {
 	position: relative;
 	width: 100%;
@@ -95,7 +92,7 @@ html.front-page {
 .home {
 	.content {
 		margin-top: 2em;
-		max-width: 60em;
+		max-width: $bc-reading-width;
 	}
 	main h1 {
 		font-family: $bc-header;

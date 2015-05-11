@@ -5,8 +5,7 @@ body {
 	font: {
 		family: $bc-font-family;
 	}
-	color: rgba(black,
-	.8);
+	color: rgba(black, .8);
 	background-color: white;
 	&.overflow-hidden {
 		/* when primary navigation is visible, the content in the background won't scroll */

@@ -1,14 +1,9 @@
 .contact {
 	.content {
-		max-width:$bc-reading-width;
-	}
-	/*@include MQ(M) {
-		fieldset {
-			@include span-columns(8);
-			@include shift(2);
-			margin-bottom: 2em;
+		@include MQ(L) {
+			max-width:$bc-reading-width;
 		}
-	}*/
+	}
 	.frm_submit {
 		text-align: center;
 
@@ -22,15 +17,6 @@
 	hr {
 
 	}
-	/*hr:after {
-		content: "or";
-		position: relative;
-		top: -0.85em;
-		font-size: 1.5em;
-		padding: 0 0.25em;
-		background: white;
-		z-index: 1
-	}*/
 	h1 {
 		font-family: $bc-font-family;
 		text-align: center;

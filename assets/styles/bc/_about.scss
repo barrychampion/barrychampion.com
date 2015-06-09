@@ -1,12 +1,14 @@
-
 .about {
-	.content {
-		margin-top: 1em;
-		@include MQ(L) {
-			max-width:$bc-reading-width;
-		}
-	}
+    .content {
+        margin-top: 1em;
+        max-width: $bc-reading-width;
+    }
 }
+
 .about-hero {
-	margin-top:$header-height-S;
+    margin-top: $header-height-S;
+    width: 100%;
+    img {
+        margin: 0 auto;
+    }
 }

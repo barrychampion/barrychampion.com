@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/opensans-regular-webfont.eot');
-    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    src: /*url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),*/
          url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
          url('../fonts/opensans-regular-webfont.woff') format('woff'),
          url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
@@ -15,7 +15,7 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/montserrat-regular-webfont.eot');
-    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    src: /*url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),*/
          url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
          url('../fonts/montserrat-regular-webfont.woff') format('woff'),
          url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),

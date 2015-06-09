@@ -10,6 +10,7 @@
 		height: auto;
 		opacity: .8;
 		margin: 1em auto 2em;
+		border:none;
 		@include MQ(M) {
 			float: left;
 			margin: 0 3em 2em 2em ;

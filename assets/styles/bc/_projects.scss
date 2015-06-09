@@ -51,7 +51,7 @@
 	background-color: white;
 	@include span-columns(12);
 	@include display-context(table);
-	margin: 0 0 1.5em;
+	margin-bottom: 1.5em;
 	line-height: 0;
 	display: none;
 	@include MQ(M) {
@@ -77,15 +77,22 @@
 	}
 	header {
 		//position: relative;
-		padding: 1.5em 1em;
+
 	}
 	h2 {
-		margin: 0;
+		margin: 1em;
+		padding:0;
 		font: {
 			family: $bc-font-family;
 			weight:400;
 			size:1em;
 		}
+		width:90%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		line-height: 1.2em;
+		color:$blue;
 	}
 }
 .project:hover {
@@ -94,8 +101,13 @@
 }
 .single-projects {
 	.content {
-		@include MQ(L) {
-			max-width:$bc-reading-width;
+		max-width:$bc-reading-width;
+		.button {
+			@media only screen and (max-width: $L) {
+				display:none;
+			}
+			display:table;
+			margin:0 auto;
 		}
 	}
 	h1 {

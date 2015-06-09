@@ -3,6 +3,7 @@
 <?php get_template_part( 'templates/head'); ?>
 
 <body <?php body_class(); ?>>
+	<?php get_template_part( 'templates/outdated-browser'); ?>
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 
 	<?php dynamic_sidebar( 'hero'); ?>

@@ -3,6 +3,7 @@
 <?php get_template_part( 'templates/head-home'); ?>
 
 <body class="home">
+	<?php get_template_part( 'templates/outdated-browser'); ?>
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 
 	<?php dynamic_sidebar( 'hero'); ?>
@@ -11,7 +12,7 @@
 		<div class="hero-inner">
 			<h1>I know, my surname really is<br><span>CHAMPION</span></h1>
 			<p><?php bloginfo('description'); ?></p>
-			<a href="<?php get_site_url(); ?>/bc/contact" class="button">Contact Barry</a>
+			<a href="<?php get_site_url(); ?>/contact" class="button">Contact Barry</a>
 		</div>
 	</section>
 	<section role="document">

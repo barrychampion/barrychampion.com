@@ -3,6 +3,7 @@
 <?php get_template_part( 'templates/head'); ?>
 
 <body class="projects archive">
+	<?php get_template_part( 'templates/outdated-browser'); ?>
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 
 	<section class="wrap content" role="document">

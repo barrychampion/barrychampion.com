@@ -1,82 +1,99 @@
 html {
-	height:100%;
+    height: 100%;
 }
-#instantclick-bar {
-	//background: $blue;
-	display: none;
-}
-body {
-	height:100%;
-	margin: 0;
-    overflow-y: scroll;
 
+#instantclick-bar {
+    //background: $blue;
+    display: none;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
     /**
     * 1. Making the <body> element behave like a flexbox container.
     * 2. Making flex children line up vertically (horizontal is default)
     * 3. Setting the min-height to 100% of the viewport height.
     */
-
     /* [1] */
     /* Ye Olde Flexbox for Webkit */
+    
     display: -webkit-box;
     /* Tweener flexbox for IE10 */
+    
     display: -ms-flexbox;
     /* Prefixed "new flexbox" */
+    
     display: -webkit-flex;
     /* unprefixed standard "new flexbox" version for the rest */
+    
     display: flex;
-
     /* [2] */
     /* Your grandparents flexbox for old Webkit */
+    
     -webkit-box-orient: vertical;
     /* Prefixed new syntax: */
+    
     -webkit-flex-direction: column;
     /* (Same syntax for weird IE tweener) */
+    
     -ms-flex-direction: column;
     /* unprefixed new syntax */
+    
     flex-direction: column;
-
     /* [3] */
+    
     min-height: 100vh;
 }
+
 body.home {
-	display: block;
+    display: block;
 }
+
 .wrap {
-/* Pepperidge Farm remembers. */
+    /* Pepperidge Farm remembers. */
+    
     -webkit-box-flex: 1 0 auto;
     /* IE10, ugh */
+    
     -ms-flex: 1 0 auto;
     /* Unprefixed */
+    
     flex: 1 0 auto;
     /* prefixed webkit syntax */
+    
     -webkit-flex: 1 0 auto;
 }
+
 .container {
-	@include outer-container;
-	max-width: $L; // breakpoints inside partials > _layout.scss
+    @include outer-container;
+    max-width: $L; // breakpoints inside partials > _layout.scss
 }
 
 .content {
-	width: 100%;
-	margin: 6em auto 0;
-	padding: 0 1.2em 2em;
-	@include MQ(M) {
-		margin-top: 7em;
-		padding: 0 1.5em 2em;
-	}
-	@include MQ(L) {
-		padding: 0 2em 2em;
-	}
+    width: 100%;
+    margin: 6em auto 0;
+    padding: 0 1.2em 2em;
+    @include MQ(M) {
+        margin-top: 7em;
+        padding: 0 1.5em 2em;
+    }
+    @include MQ(L) {
+        padding: 0 2em 2em;
+    }
 }
-.flexboxtweener, .flexboxtweener>body {
-  height: 100%;
+
+.flexboxtweener,
+.flexboxtweener>body {
+    height: 100%;
 }
+
 hr {
     padding: 0;
     border: none;
     border-top: 2px solid rgba(black, .1);
     text-align: center;
-    color:rgba(black, .4);
+    color: rgba(black, .4);
     z-index: 0
 }

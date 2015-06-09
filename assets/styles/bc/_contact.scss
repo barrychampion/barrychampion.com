@@ -1,8 +1,6 @@
 .contact {
 	.content {
-		@include MQ(L) {
-			max-width:$bc-reading-width;
-		}
+		max-width:$bc-reading-width;
 	}
 	.frm_submit {
 		text-align: center;

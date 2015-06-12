@@ -2,7 +2,7 @@
 	<div class="footer-links">
 		<div class="first">
 			<a href="<?= esc_url(home_url('/')); ?>" title="Barry Champion SVG cartoon face"><img src="<?= get_template_directory_uri(); ?>/dist/images/barry-champion-face.svg" width="150" height="186" alt="Barry Champion SVG face" class="svg-face"></a>
-			<h3><a href="tel:<?php $phone = types_render_usermeta_field("phone", array("raw"=>"true")); echo $phone; ?>"><?php $phone = types_render_usermeta_field("phone", array("raw"=>"true")); echo $phone; ?></a></h3>
+			<h3><a href="tel:07766752455">07766 752 455</a></h3>
 			<a href="mailto:<?php echo antispambot(get_the_author_meta('user_email')); ?>"><?php echo antispambot(get_the_author_meta('user_email')); ?></a>
 		</div>
 

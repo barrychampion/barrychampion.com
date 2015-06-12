@@ -1,7 +1,21 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php use Roots\Sage\Config; use Roots\Sage\Wrapper; ?>
 
-<section class="wrap">
-  <?php _e('Sorry, but the page you were trying to view does not exist.', 'sage'); ?>
-</section>
+<?php get_template_part( 'templates/head'); ?>
 
-<?php get_search_form(); ?>
+<body <?php body_class(); ?>>
+	<?php get_template_part( 'templates/outdated-browser'); ?>
+	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
+
+	<?php dynamic_sidebar( 'hero'); ?>
+	
+	<section class="wrap container content" role="document">
+		
+		<main class="main" role="main">
+			<?php _e('Sorry, but the page you were trying to view does not exist.', 'sage'); ?>
+		</main>
+		
+	</section>
+	
+	<?php get_template_part( 'templates/footer'); wp_footer(); ?>
+</body>
+</html>

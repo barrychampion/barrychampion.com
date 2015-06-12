@@ -9,7 +9,6 @@ body {
 	background-color: white;
 	&.overflow-hidden {
 		/* when primary navigation is visible, the content in the background won't scroll */
-		
 		overflow: hidden;
 	}
 }

@@ -6,22 +6,22 @@
 	//@include image-rendering(optimizeSpeed);
 	//@include clearfix;
 	@media only screen and (min-width: $L) {
-		background-image: url(../../../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
+		background-image: url(../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
 	}
 	@media only (min-width: $M) and (max-width: $L) {
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-			background-image: url(../../../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
+			background-image: url(../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
 		}
-		background-image: url(../../../../uploads/2015/04/milford-sound-dark-1170x765.jpg);
+		background-image: url(../../uploads/2015/04/milford-sound-dark-1170x765.jpg);
 	}
 	@media only (min-width: $S) and (max-width: $M) {
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-			background-image: url(../../../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
+			background-image: url(../../uploads/2015/04/milford-sound-dark-1920x1255.jpg);
 		}
-		background-image: url(../../../../uploads/2015/04/milford-sound-dark-768x502.jpg);
+		background-image: url(../../uploads/2015/04/milford-sound-dark-768x502.jpg);
 	}
 	@media only screen and (max-width: $S) {
-		background-image: url(../../../../uploads/2015/04/milford-sound-dark-640x418.jpg);
+		background-image: url(../../uploads/2015/04/milford-sound-dark-640x418.jpg);
 	}
 	background-position: center;
 	background-repeat: no-repeat;

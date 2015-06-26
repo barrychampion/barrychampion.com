@@ -6,8 +6,12 @@
 	<?php get_template_part( 'templates/outdated-browser'); ?>
 	<?php do_action( 'get_header'); get_template_part( 'templates/header'); ?>
 
-	<section class="wrap container about-hero">
-		<?php echo types_render_field("about-hero"); ?>
+	<section class="wrap about-hero">
+		<?php 
+			$ptags = array("<p>", "</p>");
+			$string = types_render_field("about-hero");
+			echo str_replace($ptags, "", $string);
+		?>
 	</section>
 
 	<section class="wrap container content" role="document">

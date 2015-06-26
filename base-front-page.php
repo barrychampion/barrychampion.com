@@ -12,7 +12,7 @@
 		<div class="hero-inner">
 			<h1>I know, my surname really is<br><span>CHAMPION</span></h1>
 			<p><?php bloginfo('description'); ?></p>
-			<a href="<?php get_site_url(); ?>/barry-champion-cv.pdf" target="_blank" class="button">Download CV</a>
+			<a href="<?php get_site_url(); ?>/contact" class="button">Contact Barry</a>
 		</div>
 	</section>
 	<section role="document">
